@@ -1,0 +1,64 @@
+module: iOLAP
+# Modifier for all generated declarations
+access: public
+# Add @available(*, deprecated) attributed
+isAddingDeprecations: true
+# Available values: ["spaces", "tabs"]
+indentation: tabs
+# Parses dates (e.g. "2021-09-29") using `NaiveDate` (https://github.com/CreateAPI/NaiveDate)
+isNaiveDateEnabled: false
+generate:
+- entities
+- paths
+- enums
+fileHeaderComment: |
+  //
+  // iOLAP is subject to the terms of the Mozilla Public
+  // License, v2.0. If a copy of the MPL was not distributed with this
+  // file, you can obtain one at https://mozilla.org/MPL/2.0/.
+  //
+  // Copyright (c) 2023 iOLAP.
+  //
+dataTypes:
+  integer:
+    int32: Int
+    int64: Int
+  string:
+    uuid: String
+entities:
+  includeIdentifiableConformance: true
+  sortPropertiesAlphabetically: true
+  isGeneratingCustomCodingKeys: false
+  isGeneratingIdentifiableConformance: true
+paths:
+  style: rest
+  filenameTemplate: "%0API.swift"
+    # Generate response headers using https://github.com/CreateAPI/HTTPHeaders
+  isGeneratingResponseHeaders: true
+  # Add operation id to each request
+  isAddingOperationIds: false
+  # Inline simple requests, like the ones with a single parameter
+  isInliningSimpleRequests: true
+    # Threshold from which to start inlining query parameters
+  simpleQueryParametersThreshold: 2
+  # Tries to remove redundant paths
+  isRemovingRedundantPaths: true
+    # Adds known types to Apple specific content-types.
+  # In CreateAPI 0.5.0 there is a typo, update this configuration key when moving to newer version
+  # (https://github.com/CreateAPI/CreateAPI/pull/78).
+  overridenBodyTypes:
+    application/vnd.apple.diagnostic-logs+json: DiagnosticLogs
+    application/vnd.apple.xcode-metrics+json: XcodeMetrics
+comments:
+  # Generate comments
+  isEnabled: true
+  # Generate titles
+  isAddingTitles: true
+  # Generate description
+  isAddingDescription: true
+  # Generate examples
+  isAddingExamples: true
+  # Add links to the external documenatation
+  isAddingExternalDocumentation: true
+  # Auto-capitalizes comments
+  isCapitalizationEnabled: true
