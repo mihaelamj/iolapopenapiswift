@@ -21,14 +21,14 @@ public extension Paths.User {
         public let path: String
 
         /// Get user by user name
-        public var get: Request<iOLAP.User> {
+        public var get: Request<iOLAPPetStore.User> {
             Request(path: path, method: "GET", id: "getUserByName")
         }
 
         /// Update user
         ///
         /// This can only be done by the logged in user.
-        public func put(_ body: iOLAP.User? = nil) -> Request<Void> {
+        public func put(_ body: iOLAPPetStore.User? = nil) -> Request<Void> {
             Request(path: path, method: "PUT", body: body, id: "updateUser")
         }
 

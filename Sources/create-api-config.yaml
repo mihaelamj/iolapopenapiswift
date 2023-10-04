@@ -1,4 +1,4 @@
-module: iOLAP
+module: iOLAPPetStore
 # Modifier for all generated declarations
 access: public
 # Add @available(*, deprecated) attributed

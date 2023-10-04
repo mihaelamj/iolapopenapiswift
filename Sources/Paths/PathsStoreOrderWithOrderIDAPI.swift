@@ -23,7 +23,7 @@ public extension Paths.Store.Order {
         /// Find purchase order by ID
         ///
         /// For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
-        public var get: Request<iOLAP.Order> {
+        public var get: Request<iOLAPPetStore.Order> {
             Request(path: path, method: "GET", id: "getOrderById")
         }
 

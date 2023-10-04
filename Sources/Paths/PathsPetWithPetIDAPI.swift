@@ -23,7 +23,7 @@ public extension Paths.Pet {
         /// Find pet by ID
         ///
         /// Returns a single pet
-        public var get: Request<iOLAP.Pet> {
+        public var get: Request<iOLAPPetStore.Pet> {
             Request(path: path, method: "GET", id: "getPetById")
         }
 

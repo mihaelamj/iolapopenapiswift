@@ -21,7 +21,7 @@ public extension Paths.User {
         public let path: String
 
         /// Creates list of users with given input array
-        public func post(_ body: [iOLAP.User]? = nil) -> Request<iOLAP.User> {
+        public func post(_ body: [iOLAPPetStore.User]? = nil) -> Request<iOLAPPetStore.User> {
             Request(path: path, method: "POST", body: body, id: "createUsersWithListInput")
         }
     }

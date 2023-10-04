@@ -23,7 +23,7 @@ public extension Paths.Store {
         /// Place an order for a pet
         ///
         /// Place a new order in the store
-        public func post(_ body: iOLAP.Order? = nil) -> Request<iOLAP.Order> {
+        public func post(_ body: iOLAPPetStore.Order? = nil) -> Request<iOLAPPetStore.Order> {
             Request(path: path, method: "POST", body: body, id: "placeOrder")
         }
     }
