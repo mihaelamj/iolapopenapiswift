@@ -21,6 +21,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kean/Get", from: "2.0.0"),
         .package(url: "https://github.com/CreateAPI/URLQueryEncoder", from: "0.2.0"),
+        .package(url: "https://github.com/CreateAPI/HTTPHeaders", .upToNextMajor(from: "0.1.1")),
     ],
     targets: [
         .target(
@@ -28,6 +29,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Get", package: "Get"),
                 .product(name: "URLQueryEncoder", package: "URLQueryEncoder"),
+                .product(name: "HTTPHeaders", package: "HTTPHeaders"),
             ],
             path: "Sources",
             exclude: ["PetStore.json",

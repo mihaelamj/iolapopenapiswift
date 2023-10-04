@@ -21,7 +21,7 @@ public extension Paths.Pet.WithPetID {
         public let path: String
 
         /// Uploads an image
-        public func post(additionalMetadata: String? = nil, _ body: Data? = nil) -> Request<iOLAPPetStore.APIResponse> {
+        public func post(additionalMetadata: String? = nil, _ body: Data? = nil) -> Request<iolapopenapiswift.APIResponse> {
             Request(path: path, method: "POST", query: makePostQuery(additionalMetadata), body: body, id: "uploadFile")
         }
 

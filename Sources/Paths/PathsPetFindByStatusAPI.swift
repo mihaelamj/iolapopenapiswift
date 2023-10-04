@@ -23,7 +23,7 @@ public extension Paths.Pet {
         /// Finds Pets by status
         ///
         /// Multiple status values can be provided with comma separated strings
-        public func get(status: Status? = nil) -> Request<[iOLAPPetStore.Pet]> {
+        public func get(status: Status? = nil) -> Request<[iolapopenapiswift.Pet]> {
             Request(path: path, method: "GET", query: makeGetQuery(status), id: "findPetsByStatus")
         }
 

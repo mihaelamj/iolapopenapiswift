@@ -1,4 +1,4 @@
-module: iOLAPPetStore
+module: iolapopenapiswift
 # Modifier for all generated declarations
 access: public
 # Add @available(*, deprecated) attributed

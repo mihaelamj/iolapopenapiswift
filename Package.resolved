@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "httpheaders",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CreateAPI/HTTPHeaders",
+      "state" : {
+        "revision" : "96c4cb3fcb904c12891c9d65c902fbb691453562",
+        "version" : "0.1.1"
+      }
+    },
+    {
       "identity" : "urlqueryencoder",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/CreateAPI/URLQueryEncoder",

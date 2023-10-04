@@ -23,7 +23,7 @@ public extension Paths {
         /// Create user
         ///
         /// This can only be done by the logged in user.
-        public func post(_ body: iOLAPPetStore.User? = nil) -> Request<iOLAPPetStore.User> {
+        public func post(_ body: iolapopenapiswift.User? = nil) -> Request<iolapopenapiswift.User> {
             Request(path: path, method: "POST", body: body, id: "createUser")
         }
     }

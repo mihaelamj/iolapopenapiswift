@@ -23,7 +23,7 @@ public extension Paths.Pet {
         /// Finds Pets by tags
         ///
         /// Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
-        public func get(tags: [String]? = nil) -> Request<[iOLAPPetStore.Pet]> {
+        public func get(tags: [String]? = nil) -> Request<[iolapopenapiswift.Pet]> {
             Request(path: path, method: "GET", query: makeGetQuery(tags), id: "findPetsByTags")
         }
 
